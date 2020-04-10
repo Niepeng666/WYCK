@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bind_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_10"
+    android:background="@drawable/shape_solid_white_corner_5"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_15"
+        android:paddingBottom="@dimen/dp_15">
+
+        <LinearLayout
+            android:id="@+id/ll_bank_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_bank_icon"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:layout_marginRight="@dimen/dp_10"
+                android:src="@drawable/zhaoshangyinhang" />
+
+            <TextView
+                android:id="@+id/tv_bank_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="但是但是多"
+                android:textSize="@dimen/sp_16" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_pay_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_2"
+            android:drawableLeft="@drawable/preview_detail_pay_icon"
+            android:drawablePadding="@dimen/dp_15"
+            android:gravity="bottom"
+            android:text="还款时间"
+            android:textSize="@dimen/sp_15"
+            android:layout_marginLeft="@dimen/dp_5"
+            app:layout_constraintLeft_toLeftOf="@id/ll_bank_name"
+            app:layout_constraintTop_toBottomOf="@id/ll_bank_name" />
+
+
+        <TextView
+            android:id="@+id/tv_bank_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_20"
+            android:text=" 0576"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_repayCycle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_20"
+            android:background="@drawable/shape_sold_background_left_corner_20"
+            android:gravity="center_vertical"
+            android:hint="2018-01-19至2018-01-25"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:textColor="@color/btn_text_color"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintBottom_toBottomOf="@id/tv_pay_title"
+            app:layout_constraintRight_toRightOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>
+

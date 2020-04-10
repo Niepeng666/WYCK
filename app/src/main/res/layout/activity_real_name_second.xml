@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:background="?attr/theme_bg_color"
+        android:src="@drawable/auth2" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_bank_1"
+                android:layout_width="@dimen/dp_170"
+                android:layout_height="@dimen/dp_120"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_30">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/auth2_chuxuka" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_45"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/shape_circle_blue"
+                    android:padding="@dimen/dp_10"
+                    android:src="@drawable/auth_camera_icon" />
+
+                <ImageView
+                    android:id="@+id/iv_bank_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"/>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/dp_7"
+                android:text="储蓄卡正面"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/dp_30">
+
+                    <TextView
+                        style="@style/realNameTextStyle"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="wrap_content"
+                        android:text="储蓄卡号：" />
+
+                    <EditText
+                        android:id="@+id/et_bank_code"
+                        style="@style/realnameText"
+                        android:hint="请输入储蓄卡号"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_5"
+                    android:background="@color/gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/dp_30">
+
+                    <TextView
+                        style="@style/realNameTextStyle"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="wrap_content"
+                        android:text="银行信息：" />
+
+                    <TextView
+                        android:id="@+id/tv_bank_name"
+                        style="@style/realnameText"
+                        android:layout_weight="1"
+                        android:hint="输入卡号自动识别" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_5"
+                    android:background="@color/gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/dp_30">
+
+                    <TextView
+                        style="@style/realNameTextStyle"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="wrap_content"
+                        android:text="预留电话：" />
+
+                    <EditText
+                        android:id="@+id/et_phone"
+                        style="@style/realnameText"
+                        android:hint="请输入银行预留手机号码"
+                        android:inputType="number"
+                        android:maxLength="11" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_5"
+                    android:background="@color/gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingRight="@dimen/dp_33">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您的身份信息将被加密处理，请放心拍摄"
+                    android:textColor="#BBBBBB"
+                    android:textSize="@dimen/sp_12" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginBottom="@dimen/dp_40"
+                android:background="@drawable/button_corners_blue_corner_5"
+                android:gravity="center"
+                android:text="下一步"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

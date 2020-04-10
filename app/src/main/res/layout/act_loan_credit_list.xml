@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitStart"
+        android:src="@drawable/bj" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_10">
+
+        <View
+            android:layout_width="@dimen/dp_5"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_5"
+            android:background="@color/background" />
+
+        <TextView
+            android:id="@+id/tv_credit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="贷款在线申请"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

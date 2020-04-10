@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:background="?attr/theme_bg_color">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/sign_bg" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_30"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/shape_solid_light_white_corner_20"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sign_money_icon" />
+
+            <TextView
+                android:id="@+id/tv_sign_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:text="今日签到可获得2.3元"
+                android:textColor="@color/btn_text_color" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.linglingyi.com.viewone.qiandao.SignDate
+        android:id="@+id/signDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp__40"
+        android:layout_marginRight="@dimen/dp_10"></com.linglingyi.com.viewone.qiandao.SignDate>
+
+    <Button
+        android:id="@+id/btn_qiandao"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_margin="@dimen/dp_20"
+        android:background="@drawable/button_corners_blue_corner_5"
+        android:text="立即签到"
+        android:textColor="@color/btn_text_color"
+        android:textSize="14dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="签到奖励规则："
+            android:textColor="@color/gray_888"
+            android:textSize="@dimen/dp_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. 每日签到可以获得现金奖励；"
+            android:textColor="@color/gray_888"
+            android:textSize="@dimen/dp_12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. 签到获得的现金将存入用户的账户余额里，可以提现"
+            android:textColor="@color/gray_888"
+            android:textSize="@dimen/dp_12" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

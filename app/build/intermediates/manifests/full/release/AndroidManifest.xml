@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wuyouchuangke.com"
+    android:versionCode="3"
+    android:versionName="1.0.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="26" />
+
+    <!-- Required -->
+    <!--
+        <permission
+        android:name="com.futengyijia.com.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    -->
+
+
+    <!-- Required -->
+    <uses-permission android:name="com.wuyouchuangke.com.permission.JPUSH_MESSAG39E" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- Optional. Required for location feature -->
+    <!-- <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> -->
+    <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取用户设备的IMEI -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 安装未知来源应用 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- SO文件加载 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <permission
+        android:name="com.wuyouchuangke.com.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" /> <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="com.wuyouchuangke.com.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+
+    <application
+        android:name="com.linglingyi.com.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/main_new_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true" >
+
+        <!-- 定位 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="118ce369203ab0127cd4cc508a06515d" />
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="360" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640" />
+        <!-- 分享SDK -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <data android:scheme="tencent1109897174" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 下载服务 -->
+        <service android:name="com.linglingyi.com.service.DownloadService" />
+        <!-- 微信分享回调 -->
+        <activity
+            android:name="com.wuyouchuangke.com.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.wuyouchuangke.com.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx9dfe0bb5db6cd3b6" />
+            </intent-filter>
+        </activity>
+        <!-- &lt;!&ndash;android:theme="@style/SplashTheme"&ndash;&gt;解决启动白屏问题 -->
+        <activity
+            android:name="com.linglingyi.com.activity.LaunchActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 主页 -->
+        <activity
+            android:name="com.linglingyi.com.activity.HomeNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainTheme" />
+
+        <!-- 登录 -->
+        <activity
+            android:name="com.linglingyi.com.activity.LoginNewActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 注册 -->
+        <activity
+            android:name="com.linglingyi.com.activity.RegisterNewActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 忘记密码 -->
+        <activity
+            android:name="com.linglingyi.com.activity.ForgetPassNewActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 选择银行页面 -->
+        <activity
+            android:name="com.linglingyi.com.activity.CustomBankNameListActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 实名认证-ocr识别 -->
+        <!-- 实名认证-绑定储蓄卡 -->
+        <activity
+            android:name="com.linglingyi.com.activity.AuthBankActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 绑定银行卡 -->
+        <activity
+            android:name="com.linglingyi.com.activity.AddBankCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainTheme" />
+
+        <!-- 提现页面 -->
+        <activity
+            android:name="com.linglingyi.com.activity.WithdrawalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.linglingyi.com.activity.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.linglingyi.com.activity.ZhucewebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.linglingyi.com.activity.X5WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="zxing.activity.CaptureActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.tencent.smtt.export.external.DexClassLoaderProviderService"
+            android:label="dexopt"
+            android:process=":dexopt" />
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:process=":multiprocess" />
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.wuyouchuangke.com" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.linglingyi.com.service.MyCommonPushService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore" >
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.linglingyi.com.service.MyJpushMessageReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
+                <category android:name="com.shuaishouzhanggui.com" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.wuyouchuangke.com.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name="com.linglingyi.com.activity.BankCardListActivity"
+            android:theme="@style/MainTheme" />
+        <activity android:name="com.linglingyi.com.activity.ChooseAccountActivity" />
+        <activity android:name="com.linglingyi.com.activity.MakeDesignActivity" />
+        <activity
+            android:name="com.linglingyi.com.activity.BindCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.linglingyi.com.activity.BankManagerActivity"
+            android:theme="@style/MainTheme" />
+        <activity android:name="com.linglingyi.com.activity.LookDataActivity" />
+        <activity
+            android:name="com.linglingyi.com.activity.ChoiceAreaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.linglingyi.com.activity.PreviewPlanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.linglingyi.com.activity.PreviewDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.linglingyi.com.activity.LookPlanActivity" />
+        <activity android:name="com.linglingyi.com.activity.PlanDetailActivity" />
+        <activity
+            android:name="com.linglingyi.com.activity.SwipeCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainTheme" />
+        <activity android:name="com.linglingyi.com.activity.NoCardPayWebActivity" />
+        <activity
+            android:name="com.linglingyi.com.activity.ImageActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.linglingyi.com.activity.UserInfoActivity" />
+        <activity android:name="com.linglingyi.com.activity.PasswordChangeActivity" />
+        <activity android:name="com.linglingyi.com.activity.SettingActivity" />
+        <activity
+            android:name="com.linglingyi.com.activity.CardScoreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainTheme" />
+        <activity
+            android:name="com.linglingyi.com.activity.CardScoreHistoryListActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.linglingyi.com.activity.MakeQuickDesignActivity" />
+        <activity android:name="com.linglingyi.com.activity.WorkingFundActivity" />
+        <activity android:name="com.linglingyi.com.activity.MyWalletActivity" />
+        <activity android:name="com.linglingyi.com.activity.WithdrawListActivity" />
+        <activity android:name="com.linglingyi.com.activity.MyClientActivity" />
+        <activity android:name="com.linglingyi.com.activity.BenefitListActivity" />
+        <activity android:name="com.linglingyi.com.activity.MyClientDetailActivity" />
+        <activity android:name="com.linglingyi.com.activity.BenefitDetailActivity" />
+        <activity android:name="com.linglingyi.com.activity.NoticeListActivity" />
+        <activity android:name="com.linglingyi.com.activity.NoticeDetailActivity" />
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.linglingyi.com.activity.GuideActivity"
+            android:screenOrientation="portrait" />
+        <!-- <activity -->
+        <!-- android:name="com.yalantis.ucrop.UCropActivity" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> -->
+        <activity android:name="com.linglingyi.com.activity.TradeActivity" />
+        <activity android:name="com.linglingyi.com.activity.CreditActivity" />
+        <activity android:name="com.linglingyi.com.activity.VipActivity" />
+        <activity android:name="com.linglingyi.com.activity.LoanListActivity" />
+        <activity android:name="com.linglingyi.com.activity.ApplyCreditLoanActivity" />
+        <activity android:name="com.linglingyi.com.activity.ApplyRecordActivity" />
+        <activity android:name="com.linglingyi.com.activity.CreditListActivity" />
+        <activity android:name="com.linglingyi.com.activity.VoiceActivity" />
+        <activity android:name="com.linglingyi.com.activity.ChangeAuthBankCardActivity" />
+        <activity android:name="com.linglingyi.com.activity.ActDetailActivity" />
+        <activity android:name="com.linglingyi.com.activity.AuthProtocolActivity" />
+        <activity android:name="com.linglingyi.com.activity.CardHonorActivity" />
+        <activity android:name="com.linglingyi.com.activity.ContactServiceActivity" />
+        <activity android:name="com.linglingyi.com.activity.DebitBankActivity" />
+        <activity android:name="com.linglingyi.com.activity.DebitBankChangeActivity" />
+        <activity android:name="com.linglingyi.com.activity.DebitcardBindActivity" />
+        <activity android:name="com.linglingyi.com.activity.InviteCodeActivity" />
+        <activity android:name="com.linglingyi.com.activity.ZhongjieActivity" />
+        <activity android:name="com.linglingyi.com.activity.ShareListActivity" />
+        <activity android:name="com.linglingyi.com.activity.RegisterFaceActivity" />
+        <activity android:name="com.linglingyi.com.activity.ServiceCenterActivity" />
+        <activity android:name="com.linglingyi.com.activity.RecordListActivity" />
+        <activity android:name="com.linglingyi.com.activity.FriendListActivity" />
+        <activity android:name="com.linglingyi.com.activity.BusinessClassActivity" />
+        <activity android:name="com.linglingyi.com.activity.ShopMallActivity" />
+        <activity android:name="com.linglingyi.com.activity.MyOrderActivity" />
+        <activity android:name="com.linglingyi.com.activity.PercentScoreActivity" />
+        <activity android:name="com.linglingyi.com.activity.ItemDetailActivity" />
+        <activity android:name="com.linglingyi.com.activity.AddressListActivity" />
+        <activity android:name="com.linglingyi.com.activity.AddressAddActivity" />
+        <activity android:name="com.linglingyi.com.activity.ClientSingleDetailActivity" />
+        <activity android:name="com.linglingyi.com.activity.OrderConfirmActivity" />
+        <activity android:name="com.linglingyi.com.activity.CardHonorHistoryListActivity" />
+        <activity android:name="com.linglingyi.com.activity.QrCodePayActivity" />
+        <activity android:name="com.linglingyi.com.activity.BankCreditDetailActivity" />
+        <activity android:name="com.linglingyi.com.activity.BankCreditDetailChangeActivity" />
+        <activity android:name="com.linglingyi.com.activity.SetWithdrawPassActivity" />
+        <activity android:name="com.linglingyi.com.activity.VipPayBankCardListActivity" />
+        <activity android:name="com.linglingyi.com.activity.TradeRecordDetailActivity" />
+        <activity android:name="com.linglingyi.com.activity.ShareActivity" />
+        <activity
+            android:name="com.linglingyi.com.activity.MakeNewDesignActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.linglingyi.com.activity.OperateDetailActivity" />
+        <activity android:name="com.linglingyi.com.activity.SignActivity" />
+        <activity android:name="com.linglingyi.com.activity.ChannelReportActivity" />
+        <activity android:name="com.linglingyi.com.activity.LordRightsActivity" />
+        <activity android:name="com.linglingyi.com.activity.IncomeRankedActivity" />
+        <activity android:name="com.linglingyi.com.activity.OrderPayDetailActivity" />
+        <activity android:name="com.linglingyi.com.activity.RealNameSecondActivity" />
+        <activity android:name="com.linglingyi.com.activity.RealNameThirdActivity" />
+        <activity android:name="com.linglingyi.com.activity.RealNameFirstActivity" />
+        <activity android:name="com.linglingyi.com.activity.ThemeChangeActivity" />
+        <activity android:name="com.linglingyi.com.activity.WinningRecordActivity" />
+        <activity android:name="com.linglingyi.com.activity.LordRightsMyActivity" />
+        <activity android:name="com.linglingyi.com.activity.ApplyLordActivity" />
+        <activity android:name="com.linglingyi.com.activity.LoginBindPhoneActivity" />
+        <activity android:name="com.linglingyi.com.activity.OrderDetailActivity" />
+        <activity android:name="com.linglingyi.com.activity.ProvinceCityActivity" />
+        <activity android:name="com.linglingyi.com.activity.PlanCardsActivity" />
+        <activity android:name="com.linglingyi.com.activity.MakeCardsActivity" />
+        <activity android:name="com.linglingyi.com.activity.PreviewCardsDetailActivity" />
+        <activity android:name="com.linglingyi.com.activity.CardsChannelActivity" />
+        <activity android:name="com.linglingyi.com.activity.ChoiceMerchantActivity" />
+        <activity android:name="com.linglingyi.com.activity.CardsPlanDetailActivity" />
+        <activity android:name="com.linglingyi.com.activity.NewGuideActivity" />
+        <activity android:name="com.linglingyi.com.activity.LingzhuActivity" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5cdd53f14ca35757850006fc" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Umeng" />
+
+        <activity
+            android:name="com.lzy.imagepicker.ui.FreeCropActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:theme="@style/ImagePickerTheme" />
+        <activity android:name="com.lzy.imagepicker.ui.ImageBaseActivity" />
+        <activity
+            android:name="com.lzy.imagepicker.ui.ImageGridActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ImagePickerTheme" />
+        <activity
+            android:name="com.lzy.imagepicker.ui.ImageCropActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:theme="@style/ImagePickerTheme" />
+        <activity
+            android:name="com.lzy.imagepicker.ui.ImagePreviewActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ImagePickerThemeFullScreen" />
+        <activity
+            android:name="com.lzy.imagepicker.ui.ImagePreviewDelActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ImagePickerThemeFullScreen" />
+
+        <provider
+            android:name="com.lzy.imagepicker.ImagePickerProvider"
+            android:authorities="com.wuyouchuangke.com.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+            android:value="GlideModule" /> <!-- Rich push 核心功能 since 2.0.6 -->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle" /> <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.wuyouchuangke.com" />
+            </intent-filter>
+        </activity> <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter android:priority="1000" >
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
+                <category android:name="com.wuyouchuangke.com" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver> <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" /> <!-- since 3.0.9 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DataProvider"
+            android:authorities="com.wuyouchuangke.com.DataProvider"
+            android:exported="false"
+            android:process=":pushcore" /> <!-- since 3.1.0 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DownloadProvider"
+            android:authorities="com.wuyouchuangke.com.DownloadProvider"
+            android:exported="true" /> <!-- since 3.3.0 Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.service.JNotifyActivity"
+            android:exported="true"
+            android:taskAffinity="jpush.custom"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.JNotifyActivity" />
+
+                <category android:name="com.wuyouchuangke.com" />
+            </intent-filter>
+        </activity> <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="6e12084af21a13a556d68de0" /> <!-- android:allowBackup="false" -->
+        <!-- android:label="FaceLivenessSDK" -->
+        <!-- android:theme="@style/ABFaceLivenessAppTheme" -->
+        <!-- android:taskAffinity="com.alibaba.security.biometrics.faceliveness" -->
+        <activity
+            android:name="com.alibaba.security.biometrics.face.auth.FaceLivenessActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.alibaba.security.rp.activity.RPTakePhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.alibaba.security.rp.activity.RPH5Activity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
+    </application>
+
+</manifest>

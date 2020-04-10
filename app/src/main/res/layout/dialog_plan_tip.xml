@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dip"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="10dip"
+    android:background="@drawable/back_plan_assitet">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="该卡片已有执行中计划"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="请在该计划暂停或完成后再创建新计划"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/tv2"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_corners_blue_corner_5"
+        android:gravity="center"
+        android:text="OK"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>
+
+

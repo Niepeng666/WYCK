@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@drawable/shape_gradient_yellow"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/score_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您当前空卡代还分数"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="80sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:lineSpacingMultiplier="1.2"
+        android:text="温馨提示：\n请珍惜您的信用评分，使用空卡代还时请确保信用卡的可用额度够消费额度，如果您的卡有办理分期，最低还款，贷款或其他扣费业务，请提前预存够银行扣费金额，防止订单出现消费失败！\n空卡代还说明：\n评分系统，每个用户都有一个基础分（10分）\na.若消费失败（包括手续费消费）一次，则扣除10分\nb.若还款失败，则不扣分；若计划执行完毕，无消费失败，则加10分\nc.评分小于等于0分时，无法创建无预留还款计划（已有计划可继续执行）" />
+
+</LinearLayout>

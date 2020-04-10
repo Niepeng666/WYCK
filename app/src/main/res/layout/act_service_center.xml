@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_15">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/online_service_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="处理软件操作、还款相关问题" />
+
+        <Button
+            android:id="@+id/btn_online_service"
+            android:layout_width="@dimen/dp_200"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@drawable/shape_solid_background_corner_5"
+            android:text="立即咨询"
+            android:textColor="@color/btn_text_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/shape_solid_white_corner_5"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/service_phone_icon"
+            android:drawablePadding="@dimen/dp_5"
+            android:text="电话客服" />
+
+        <TextView
+            android:id="@+id/tv_service_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="联系电话:"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="工作时间：09:00-18:00（非国家法定假日）"
+            android:textColor="@color/gray_light"
+            android:textSize="@dimen/sp_12" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_service_wechat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/shape_solid_white_corner_5"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/weixin_ic"
+            android:drawablePadding="@dimen/dp_5"
+            android:text="微信客服" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_wechat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="官方微信号:"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btn_wechat_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_25"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_solid_background_corner_5"
+                android:text="复制微信号"
+                android:textColor="@color/btn_text_color"
+                android:textSize="@dimen/sp_12" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_weight="0.5"
+        android:text="温馨提示：为了更加快速解答您的问题，建议优先点击“在线客服”，同时把您的注册手机号姓名和相关问题及时发送，谢谢！"
+        android:textSize="@dimen/sp_12"
+        android:visibility="visible" />
+</LinearLayout>

@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_287"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/auth_head" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/dp_287"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="OCR识别"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="身份校验"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/iv_id_card_a"
+                android:layout_width="@dimen/dp_310"
+                android:layout_height="@dimen/dp_128"
+                android:layout_marginTop="@dimen/dp_20"
+                android:src="@drawable/auth_pic_bg" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/dp_7"
+                android:text="*身份证头像面"
+                android:textColor="@color/black_55"
+                android:textSize="@dimen/sp_11" />
+
+            <ImageView
+                android:id="@+id/iv_id_card_b"
+                android:layout_width="@dimen/dp_310"
+                android:layout_height="@dimen/dp_128"
+                android:src="@drawable/auth_pic_bg" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/dp_7"
+                android:text="*身份证国徽面"
+                android:textColor="@color/black_55"
+                android:textSize="@dimen/sp_11" />
+
+            <ImageView
+                android:id="@+id/iv_ocr"
+                android:layout_width="@dimen/dp_310"
+                android:layout_height="@dimen/dp_128"
+                android:src="@drawable/auth_pic_bg" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/dp_7"
+                android:text="*活体照"
+                android:textColor="@color/black_55"
+                android:textSize="@dimen/sp_11" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/gray_line"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_30"
+                android:text="请核对您的身份信息"
+                android:textSize="@dimen/sp_13" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_36"
+                android:paddingRight="@dimen/dp_33">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/realNameTextStyle"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="wrap_content"
+                        android:text="姓名" />
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        style="@style/realNameTextStyle"
+                        android:hint="识别后返回"
+                        android:textColor="@color/btn_text_color" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_36"
+                android:paddingRight="@dimen/dp_33">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/realNameTextStyle"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="wrap_content"
+                        android:text="身份证" />
+
+                    <TextView
+                        android:id="@+id/tv_idcard"
+                        style="@style/realNameTextStyle"
+                        android:hint="识别后返回"
+                        android:textColor="@color/btn_text_color" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/gray" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_customer_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp_36"
+                android:paddingTop="@dimen/dp_15"
+                android:paddingRight="@dimen/dp_33"
+                android:paddingBottom="@dimen/dp_5">
+
+                <TextView
+                    style="@style/realNameTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="状态描述" />
+
+                <TextView
+                    android:id="@+id/tv_customer_status_desc"
+                    style="@style/realNameTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:inputType="number"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:singleLine="true"
+                    android:text="未认证"
+                    android:textColorHint="#bebebe" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_checked_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp_33"
+                android:paddingTop="@dimen/dp_15"
+                android:paddingRight="@dimen/dp_33"
+                android:paddingBottom="@dimen/dp_5"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/realNameTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="审核意见" />
+
+                <TextView
+                    android:id="@+id/tv_checked_info"
+                    style="@style/realNameTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:inputType="number"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:singleLine="true"
+                    android:text="卡号错误"
+                    android:textColorHint="#bebebe" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp_33"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_33">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_id_match"
+                        android:layout_width="wrap_content"
+                        android:layout_height="19dp"
+                        android:src="@drawable/check_select" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:text="身份匹配度"
+                        android:textSize="@dimen/sp_12" />
+
+                    <TextView
+                        android:id="@+id/tv_id_match_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0%"
+                        android:textColor="@color/loan_text_color_3" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_ocr_match"
+                        android:layout_width="@dimen/dp_13"
+                        android:layout_height="@dimen/dp_13"
+                        android:src="@drawable/check_select" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:text="活体认证度"
+                        android:textSize="@dimen/sp_12" />
+
+                    <TextView
+                        android:id="@+id/tv_ocr_match_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0%"
+                        android:textColor="@color/loan_text_color_3" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_40"
+                android:layout_marginBottom="@dimen/dp_40"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="@dimen/dp_15"
+                app:cardElevation="@dimen/dp_3"
+                app:contentPaddingBottom="0dp">
+
+                <Button
+                    android:id="@+id/btn_next"
+                    android:layout_width="@dimen/dp_150"
+                    android:layout_height="@dimen/dp_30"
+                    android:background="@drawable/button_corners_blue_corner_25"
+                    android:gravity="center"
+                    android:text="下一步"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

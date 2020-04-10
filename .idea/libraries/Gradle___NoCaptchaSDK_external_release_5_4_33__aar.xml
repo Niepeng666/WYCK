@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: :NoCaptchaSDK-external-release-5.4.33:@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/NoCaptchaSDK-external-release-5.4.33.aar/585a510f41711303eff7564427b6ab58/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/NoCaptchaSDK-external-release-5.4.33.aar/585a510f41711303eff7564427b6ab58/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

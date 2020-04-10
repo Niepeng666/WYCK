@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_10"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_card"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@drawable/shape_solid_red_top_left_right"
+        android:padding="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/iv_bank_icon"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:background="@drawable/shape_solid_white_circle"
+            android:padding="@dimen/dp_3"
+            android:src="@drawable/icon_zhaoshang" />
+
+        <TextView
+            android:id="@+id/tv_bank_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/iv_bank_icon"
+            android:text="银行"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/iv_bank_icon"
+            app:layout_constraintLeft_toRightOf="@id/iv_bank_icon"
+            app:layout_constraintTop_toTopOf="@id/iv_bank_icon" />
+
+        <TextView
+            android:id="@+id/tv_bank_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="233"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_bank_icon" />
+
+        <TextView
+            android:id="@+id/tv_unbind"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_20"
+            android:background="@drawable/shape_strike_white_corner_5"
+            android:gravity="center"
+            android:text="解绑"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_9"
+            app:layout_constraintRight_toRightOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_solid_white_bottom_left_right"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_10">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="额度"
+                    android:textColor="@color/gray_light" />
+
+                <TextView
+                    android:id="@+id/tv_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="账单日"
+                    android:textColor="@color/gray_light" />
+
+                <TextView
+                    android:id="@+id/tv_bill_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="还款日"
+                    android:textColor="@color/gray_light" />
+
+                <TextView
+                    android:id="@+id/tv_pay_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_make"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.5"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_make"
+                    android:layout_width="@dimen/dp_70"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_gravity="right"
+                    android:background="@drawable/button_corners_blue_corner_5"
+                    android:text="立即还款"
+                    android:textColor="@color/btn_text_color"
+                    android:textSize="@dimen/sp_12" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_plan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/ll_make_design"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40">
+
+                <TextView
+                    android:id="@+id/tv_make_design"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/card_make_plan"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:gravity="center_vertical"
+                    android:text="制定计划" />
+
+                <TextView
+                    android:id="@+id/tv_plan_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_toRightOf="@id/tv_make_design"
+                    android:drawableRight="@drawable/item_right"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:gravity="center_vertical|right"
+                    android:text="" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/gray_line" />
+
+
+            <TextView
+                android:id="@+id/tv_look_plan"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:drawableLeft="@drawable/card_look_plan"
+                android:drawableRight="@drawable/item_right"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:text="查看计划" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/gray_line" />
+
+            <TextView
+                android:id="@+id/tv_look_data"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:drawableLeft="@drawable/card_look_data"
+                android:drawableRight="@drawable/item_right"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:text="查看资料" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/gray_line"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_card_unbind"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:drawableLeft="@drawable/card_unbind"
+                android:drawableRight="@drawable/item_right"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:text="卡片解绑"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/gray_line"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_card_score"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:drawableLeft="@drawable/card_score"
+                android:drawableRight="@drawable/item_right"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:text="当前评分"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

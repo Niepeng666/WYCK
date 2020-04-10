@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tl_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:tabIndicatorColor="?attr/theme_bg_color"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="?attr/theme_bg_color"
+        app:tabTextColor="@color/gray_888">
+
+        <android.support.design.widget.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="代还" />
+
+        <android.support.design.widget.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="快捷" />
+
+
+    </android.support.design.widget.TabLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/shape_solid_white_corner_10"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/total_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="bottom"
+            android:text="交易总额"
+            android:textSize="@dimen/sp_15" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dp_20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_5"
+                android:text="￥"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:id="@+id/tv_total_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_35" />
+
+        </LinearLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60">
+
+            <TextView
+                android:id="@+id/tv_seven_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="七日交易总笔数"
+                app:layout_constraintBottom_toTopOf="@id/tv_seven_num"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="@id/view_center_line"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_seven_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="@id/view_center_line"
+                app:layout_constraintTop_toBottomOf="@id/tv_seven_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_2"
+                android:text="笔"
+                android:textColor="@color/background"
+                android:textSize="@dimen/sp_9"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/tv_seven_num"
+                app:layout_constraintLeft_toRightOf="@id/tv_seven_num" />
+
+            <View
+                android:id="@+id/view_center_line"
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="@dimen/dp_25"
+                android:background="@color/gray_line"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_seven_money_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="七日交易总金额"
+                app:layout_constraintBottom_toTopOf="@id/tv_seven_money"
+                app:layout_constraintLeft_toLeftOf="@id/view_center_line"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_seven_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/view_center_line"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_seven_money_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_2"
+                android:text="元"
+                android:textColor="@color/background"
+                android:textSize="@dimen/sp_9"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/tv_seven_money"
+                app:layout_constraintLeft_toRightOf="@id/tv_seven_money" />
+
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_10">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:psd="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_solid_white_corner_5"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_40"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="提现密码确认"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <com.linglingyi.com.viewone.CustomInputView
+        android:id="@+id/input_jihuo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_margin="@dimen/dp_10"
+        android:digits="@string/only_num_en"
+        android:inputType="text"
+        psd:maxCount="6"
+        psd:psdType="bottomLine"
+        psd:rectAngle="4dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:layout_weight="1"
+            android:background="@drawable/shape_strike_red_corner_5"
+            android:text="取消"
+            android:textColor="@color/background"
+            android:textSize="@dimen/sp_16" />
+
+        <Button
+            android:id="@+id/btn_admit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:layout_weight="1"
+            android:background="@drawable/shape_solid_gray_corner_5"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

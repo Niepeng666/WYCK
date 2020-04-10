@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_65"
+        android:background="@color/orange_fb8d1c"
+        >
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:padding="@dimen/dp_12"
+            android:src="@drawable/title_left_arrow" />
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:text="签到"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18" />
+    </RelativeLayout>
+    <com.linglingyi.com.viewone.qiandao.SignDate
+        android:id="@+id/signDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10">
+    </com.linglingyi.com.viewone.qiandao.SignDate>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="签到奖励规则："
+            android:textSize="@dimen/dp_14"
+            android:textColor="@color/gray_888"/>
+        <TextView
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. 每日签到可以获得对应的金币奖励；"
+            android:textSize="@dimen/dp_12"
+            android:padding="@dimen/dp_5"
+            android:textColor="@color/gray_888"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5"
+            android:textSize="@dimen/dp_12"
+            android:text="2.签到从当天开始获得1金币,连续签到每天+1,到第7天上限7金币 "
+            android:textColor="@color/gray_888"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5"
+            android:textSize="@dimen/dp_12"
+            android:text="3.第7天之后每天签到+7分,中间断开签到，从第一天重新计算"
+            android:textColor="@color/gray_888"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_qiandao"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:text="签到"
+        android:textColor="#fff"
+        android:background="@drawable/button_corners_blue_corner_5"
+        android:textSize="14dp"
+        android:layout_margin="@dimen/dp_20"/>
+</LinearLayout>

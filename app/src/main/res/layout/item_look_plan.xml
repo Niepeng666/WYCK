@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_10"
+
+    android:elevation="2dp"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp_5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_solid_white_corner_5"
+        android:orientation="vertical">
+
+
+        <RelativeLayout style="@style/planListRL">
+
+            <TextView
+                android:id="@+id/tv_planCreateTime"
+                style="@style/planDetailTVLeft"
+                android:text="创建时间：" />
+
+            <TextView
+                android:id="@+id/tv_progress"
+                style="@style/planDetailTVRight"
+                android:text="进度 20%"
+                android:textColor="@color/red" />
+        </RelativeLayout>
+
+        <View style="@style/lineStyle2" />
+
+        <RelativeLayout style="@style/planListRL">
+
+            <TextView
+                android:id="@+id/tv_channel_name"
+                style="@style/planDetailTVLeft"
+                android:text="通道名称" />
+        </RelativeLayout>
+
+        <View style="@style/lineStyle2" />
+
+        <RelativeLayout style="@style/planListRL">
+
+            <TextView
+                android:id="@+id/tv_planCycle"
+                style="@style/planDetailTVLeft"
+                android:text="计划周期：2017-12-12至2018-12-12" />
+        </RelativeLayout>
+
+
+        <View style="@style/lineStyle2" />
+
+        <RelativeLayout style="@style/planListRL">
+
+            <TextView
+                android:id="@+id/tv_shouldPayNow"
+                style="@style/planDetailTVLeft"
+                android:text="本期应还：￥4000" />
+
+        </RelativeLayout>
+
+        <View style="@style/lineStyle2" />
+
+        <RelativeLayout style="@style/planListRL">
+
+            <TextView
+                android:id="@+id/tv_paidAmountNow"
+                style="@style/planDetailTVLeft"
+                android:text="本期已还：￥4000" />
+        </RelativeLayout>
+
+        <View style="@style/lineStyle2" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_25"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center">
+
+            <TextView
+                style="@style/planDetailTVLeft"
+                android:text="订单状态：" />
+
+            <TextView
+                android:id="@+id/tv_dealStatus"
+                style="@style/planDetailTVRight"
+                android:drawablePadding="2dp"
+                android:text="已失败"
+                android:textSize="@dimen/sp_13" />
+
+        </LinearLayout>
+
+        <View style="@style/lineStyle2" />
+
+        <Button
+            android:id="@+id/btn_detail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="@drawable/button_corners_blue_corner_5"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:paddingLeft="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_5"
+            android:text="计划详情"
+            android:textColor="@color/btn_text_color"
+            android:textSize="@dimen/sp_12" />
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="@dimen/dp_25"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/btn_detail"
+            android:background="@drawable/button_corners_blue_corner_5"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:paddingLeft="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_5"
+            android:text="重置计划"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

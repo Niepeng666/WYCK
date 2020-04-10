@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.linglingyi.com.activity.LookDataActivity">
+
+    <include
+        android:id="@+id/rl_header"
+        layout="@layout/layout_title" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_bank_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/rl_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/dp_20"
+                android:text="银行名称："
+                android:textColor="@color/gray_888" />
+
+            <TextView
+                android:id="@+id/tv_bank_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text=""
+                android:textColor="@color/gray_888" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/dp_20"
+                android:text="银行卡号："
+                android:textColor="@color/gray_888" />
+
+            <TextView
+                android:id="@+id/tv_bank_account_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text=""
+                android:textColor="@color/gray_888" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/dp_20"
+                android:text="开户姓名："
+                android:textColor="@color/gray_888" />
+
+            <TextView
+                android:id="@+id/tv_name_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text=""
+                android:textColor="@color/gray_888" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/dp_20"
+                android:text="预留手机："
+                android:textColor="@color/gray_888" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text=""
+                android:textColor="@color/gray_888" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/dp_20"
+                android:text="身份证号："
+                android:textColor="@color/gray_888" />
+
+            <TextView
+                android:id="@+id/tv_id_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text=""
+                android:textColor="@color/gray_888" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/dp_20"
+                android:text="信用额度："
+                android:textColor="@color/gray_888" />
+
+            <TextView
+                android:id="@+id/tv_limit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text=""
+                android:textColor="@color/gray_888" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/dp_20"
+                android:text="账单日期："
+                android:textColor="@color/gray_888" />
+
+            <TextView
+                android:id="@+id/tv_bill_day"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text=""
+                android:textColor="@color/gray_888" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/dp_20"
+                android:text="还款日期："
+                android:textColor="@color/gray_888" />
+
+            <TextView
+                android:id="@+id/tv_pay_day"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text=""
+                android:textColor="@color/gray_888" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/dp_20"
+                android:text="卡有效期："
+                android:textColor="@color/gray_888" />
+
+            <TextView
+                android:id="@+id/tv_dead_line"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text=""
+                android:textColor="@color/gray_888" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/dp_20"
+                android:text="cvv2码："
+                android:textColor="@color/gray_888" />
+
+            <TextView
+                android:id="@+id/tv_cvv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text=""
+                android:textColor="@color/gray_888" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_card_change"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/ll_bank_info">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="信用额度：" />
+
+            <EditText
+                android:id="@+id/et_limit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:inputType="number"
+                android:background="@drawable/shape_strike_gray_corner_5"
+                android:hint="请输入信用卡额度"
+                android:paddingLeft="@dimen/dp_10"
+                android:textSize="@dimen/sp_14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账单日期：" />
+
+            <TextView
+                android:id="@+id/et_bill_day"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:background="@drawable/shape_strike_gray_corner_5"
+                android:gravity="center_vertical"
+                android:hint="请选择信用卡账单日"
+                android:paddingLeft="@dimen/dp_10"
+                android:textSize="@dimen/sp_14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="还款日期：" />
+
+            <TextView
+                android:id="@+id/et_pay_day"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:background="@drawable/shape_strike_gray_corner_5"
+                android:gravity="center_vertical"
+                android:hint="请选择信用卡还款日"
+                android:paddingLeft="@dimen/dp_10"
+                android:textSize="@dimen/sp_14" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_change"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:background="@drawable/button_corners_blue_corner_5"
+        android:gravity="center"
+        android:text="提交修改"
+        android:textColor="@color/btn_text_color"
+        app:layout_constraintTop_toBottomOf="@id/ll_card_change" />
+
+</android.support.constraint.ConstraintLayout>

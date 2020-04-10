@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/invite_code_icon"
+            android:drawablePadding="@dimen/dp_20"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            android:text="您选择了激活码升级VIP" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        android:layout_weight="1.5"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_invite"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/shape_strike_gray_solid_white"
+            android:hint="请输入激活码"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/gray_888"
+            android:textSize="@dimen/sp_14" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_30"
+            android:background="@drawable/shape_solid_bg_red_corner_25"
+            android:gravity="center"
+            android:text="立刻激活"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

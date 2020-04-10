@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="@dimen/dp_10"
+    android:paddingBottom="@dimen/dp_10">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp_5">
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/title_update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:text="正在更新，请稍候..."
+                        android:textColor="#6a6a6a"
+                        android:textSize="@dimen/sp_20"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/title_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:gravity="center"
+                        android:text="拨打客服电话?"
+                        android:textColor="#6a6a6a"
+                        android:textSize="@dimen/sp_20"
+                        android:visibility="visible" />
+
+                    <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+                        android:id="@+id/progressBar_update"
+                        android:layout_width="@dimen/dp_56"
+                        android:layout_height="@dimen/dp_56"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:visibility="gone"
+                        app:mlpb_arrow_height="@dimen/dp_5"
+                        app:mlpb_arrow_width="@dimen/dp_10"
+                        app:mlpb_progress_stoke_width="@dimen/dp_3"
+                        app:mlpb_progress_text_visibility="visible"
+                        app:mlpb_show_arrow="true" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#a9a9a9" />
+
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp_2"
+                android:background="#a9a9a9"
+                android:progressDrawable="@drawable/progressbar_color"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/right_bt"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:padding="@dimen/dp_10"
+                    android:text="取消"
+                    android:textColor="@color/loan_text_color_3"
+                    android:textSize="@dimen/sp_20" />
+
+
+                <ImageView
+                    android:id="@+id/verticalbars_iv"
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="#a9a9a9" />
+
+                <Button
+                    android:id="@+id/left_bt"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:padding="@dimen/dp_10"
+                    android:text="确定"
+                    android:textColor="@color/loan_text_color_3"
+                    android:textSize="@dimen/sp_20" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

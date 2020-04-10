@@ -1,0 +1,45 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\BIANHUA_work\\WYCK\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v19\\values-v19.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\ImagePicker-1.0.6.aar\\7543cff2aa6a6c1528cbe2efd465bbc8\\res\\values-v19\\values-v19.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "329"
+                    },
+                    "to": {
+                        "startLines": "5",
+                        "startColumns": "4",
+                        "startOffsets": "166",
+                        "endLines": "9",
+                        "endColumns": "12",
+                        "endOffsets": "440"
+                    }
+                },
+                {
+                    "source": "D:\\BIANHUA_work\\WYCK\\app\\src\\main\\res\\values-v19\\dimens.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "57,95,133",
+                        "endColumns": "36,36,36",
+                        "endOffsets": "89,127,165"
+                    },
+                    "to": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,92,129",
+                        "endColumns": "36,36,36",
+                        "endOffsets": "87,124,161"
+                    }
+                }
+            ]
+        }
+    ]
+}

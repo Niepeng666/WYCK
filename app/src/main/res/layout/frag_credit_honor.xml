@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginRight="@dimen/dp_25"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="@dimen/dp_6"
+                android:layout_height="@dimen/dp_20"
+                android:background="@color/bg_blue" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:text="基本信息"
+                android:textColor="@color/bg_blue" />
+
+            <TextView
+                android:id="@+id/tv_history"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="历史记录"
+                android:textColor="@color/bg_blue"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp">
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_strike_gray_corner_10"
+                android:hint="姓名"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_idCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_strike_gray_corner_10"
+                android:digits="0123456789X"
+                android:hint="身份证号"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_bank_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_strike_gray_corner_10"
+                android:hint="银行卡号"
+                android:inputType="number"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/code_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="所属银行：" />
+
+                    <TextView
+                        android:id="@+id/tv_bank_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/shape_strike_gray_corner_10"
+                    android:hint="手机号"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/et_phone_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/shape_strike_gray_corner_10"
+                    android:hint="手机号服务密码"
+                    android:inputType="numberPassword"
+                    android:maxLength="6"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <CheckBox
+                    android:id="@+id/cb_xieYi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="我已阅读并同意"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_xieYi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="《用户授权协议》"
+                    android:textColor="@color/bg_blue" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查询费用："
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9.90元"
+                    android:textColor="@color/red"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/button_corners_blue_corner_25"
+                android:text="查询"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="查询须知："
+                android:textSize="16sp" />
+
+            <!--卡测评查询须知-->
+            <TextView
+                android:id="@+id/tv_card_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1.两个月内新卡请勿查询，否则查无结果；\n2.近半年内无交易的卡请勿查询，否则查无结果；\n3.请确保输入信息属实，否则查无结果；"
+                android:visibility="gone" />
+            <!--征信查询须知-->
+            <TextView
+                android:id="@+id/tv_card_honor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1.手机号服务密码是登录手机营业厅的密码；"
+                android:visibility="visible" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

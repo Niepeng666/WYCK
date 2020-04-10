@@ -1,0 +1,65 @@
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_make_design"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:drawableLeft="@drawable/card_make_plan"
+        android:drawableRight="@drawable/item_right"
+        android:drawablePadding="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:text="定制计划" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/gray_line" />
+
+    <TextView
+        android:id="@+id/tv_look_plan"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:drawableLeft="@drawable/card_look_plan"
+        android:drawableRight="@drawable/item_right"
+        android:drawablePadding="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:text="查看计划" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/gray_line" />
+
+    <TextView
+        android:id="@+id/tv_look_data"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:drawableLeft="@drawable/card_look_data"
+        android:drawableRight="@drawable/item_right"
+        android:drawablePadding="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:text="查看资料" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/gray_line" />
+
+    <TextView
+        android:id="@+id/tv_card_unbind"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:drawableLeft="@drawable/card_unbind"
+        android:drawableRight="@drawable/item_right"
+        android:drawablePadding="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:text="卡片解绑" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/gray_line" />
+</LinearLayout>

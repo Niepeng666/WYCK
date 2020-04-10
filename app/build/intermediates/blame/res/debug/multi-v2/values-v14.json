@@ -1,0 +1,47 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\BIANHUA_work\\WYCK\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+            "map": [
+                {
+                    "source": "D:\\BIANHUA_work\\WYCK\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "from": {
+                        "startLines": "7,12",
+                        "startColumns": "4,4",
+                        "startOffsets": "220,438",
+                        "endLines": "11,14",
+                        "endColumns": "12,12",
+                        "endOffsets": "433,596"
+                    },
+                    "to": {
+                        "startLines": "2,12",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,549",
+                        "endLines": "6,14",
+                        "endColumns": "12,12",
+                        "endOffsets": "268,707"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\8e2efa9ee144ee9ba846688e57f9ff2b\\res\\values-v14\\values-v14.xml",
+                    "from": {
+                        "startLines": "2,7,8,9,15",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,331,402,485,895",
+                        "endLines": "6,7,8,14,20",
+                        "endColumns": "12,70,82,12,12",
+                        "endOffsets": "326,397,480,890,1312"
+                    },
+                    "to": {
+                        "startLines": "7,15,16,17,23",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "273,712,783,866,1276",
+                        "endLines": "11,15,16,22,28",
+                        "endColumns": "12,70,82,12,12",
+                        "endOffsets": "544,778,861,1271,1693"
+                    }
+                }
+            ]
+        }
+    ]
+}

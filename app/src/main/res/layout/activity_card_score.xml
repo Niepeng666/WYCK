@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.linglingyi.com.activity.CardScoreActivity">
+
+    <include
+        android:id="@+id/rl_header"
+        layout="@layout/layout_title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@id/rl_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="@dimen/dp_4"
+                android:layout_height="@dimen/dp_20"
+                android:background="?attr/theme_bg_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:text="基本信息"
+                android:textColor="?attr/theme_bg_color" />
+
+            <TextView
+                android:id="@+id/tv_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:gravity="right"
+                android:text="历史记录"
+                android:textColor="?attr/theme_bg_color"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/shape_solid_white_corner_5"
+            android:hint="姓名"
+            android:paddingLeft="@dimen/dp_10"
+            android:singleLine="true"
+            android:textColorHint="@color/gray_light"
+            android:textSize="@dimen/sp_14" />
+
+        <EditText
+            android:id="@+id/et_id_card"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/shape_solid_white_corner_5"
+            android:digits="@string/digit_idcard_number"
+            android:hint="身份证号"
+            android:inputType="text"
+            android:paddingLeft="@dimen/dp_10"
+            android:singleLine="true"
+            android:textColorHint="@color/gray_light"
+            android:textSize="@dimen/sp_14" />
+
+        <EditText
+            android:id="@+id/et_bank_account"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/shape_solid_white_corner_5"
+            android:hint="信用卡号"
+            android:inputType="number"
+            android:paddingLeft="@dimen/dp_10"
+            android:singleLine="true"
+            android:textColorHint="@color/gray_light"
+            android:textSize="@dimen/sp_14" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/shape_solid_white_corner_5"
+            android:hint="手机号"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:paddingLeft="@dimen/dp_10"
+            android:singleLine="true"
+            android:textColorHint="@color/gray_light"
+            android:textSize="@dimen/sp_14" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查询费用："
+                android:textColor="@color/gray_888" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_14"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <com.linglingyi.com.viewone.FontIconView
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/icon_check_rectangle"
+                android:textColor="?attr/theme_bg_color"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我阅读并同意"
+                android:textSize="@dimen/sp_10"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_registration_protocol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:text="《用户授权协议》"
+                android:textColor="?attr/theme_bg_color"
+                android:textSize="@dimen/sp_11" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_check"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_19"
+            android:background="@drawable/button_corners_blue_corner_5"
+            android:gravity="center"
+            android:text="查询"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_25"
+        android:layout_marginRight="@dimen/dp_25"
+        android:orientation="vertical"
+
+        app:layout_constraintTop_toBottomOf="@id/ll_info">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查询须知："
+            android:textColor="@color/gray_888"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.两个月内新卡请勿查询，否则查无结果"
+            android:textColor="@color/gray_888"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:text="2.近半年内无交易的卡请勿查询，否则查无结果"
+            android:textColor="@color/gray_888"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.请确保输入信息属实，否则查无结果"
+            android:textColor="@color/gray_888"
+            android:textSize="@dimen/sp_13" />
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

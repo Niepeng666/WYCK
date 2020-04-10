@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/dp_60"
+        android:singleLine="true"
+        android:text=""
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_15" />
+
+    <ImageView
+        android:id="@+id/iv_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:src="@drawable/iv_client_zjhy"
+        app:layout_constraintLeft_toRightOf="@id/tv_name"
+        app:layout_constraintTop_toTopOf="@id/tv_name" />
+
+    <LinearLayout
+        android:id="@+id/ly_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toRightOf="@id/iv_level">
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/dp_5"
+            android:maxLines="11"
+            android:layout_marginRight="@dimen/dp_5"
+            android:text="" />
+
+        <com.linglingyi.com.viewone.FontIconView
+            android:id="@+id/icon_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/icon_call_phone"
+            android:textColor="@color/background"
+            android:textSize="@dimen/sp_15" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_create_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
+

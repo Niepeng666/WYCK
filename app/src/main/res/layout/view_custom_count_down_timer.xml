@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/day_item"-->
+    <!--android:layout_width="20dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:paddingBottom="2dp"-->
+    <!--android:paddingLeft="3dp"-->
+    <!--android:paddingRight="3dp"-->
+    <!--android:paddingTop="2dp">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_day_decade"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="12sp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_day_unit"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginLeft="1dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="12sp" />-->
+
+
+    <!--</LinearLayout>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_colon_one"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginLeft="2dp"-->
+    <!--android:layout_marginRight="2dp"-->
+    <!--android:gravity="center"-->
+    <!--android:padding="1dp"-->
+    <!--android:text="天"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="@dimen/text_12"-->
+    <!--/>-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/hour_item"-->
+    <!--android:layout_width="20dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:paddingBottom="2dp"-->
+    <!--android:paddingLeft="3dp"-->
+    <!--android:paddingRight="3dp"-->
+    <!--android:paddingTop="2dp"-->
+    <!--android:textColor="@color/white">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_hour_decade"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="12sp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_hour_unit"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginLeft="1dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="12sp" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_colon_two"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:gravity="center"-->
+    <!--android:padding="1dp"-->
+    <!--android:text=":"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="15sp"-->
+    <!--android:textStyle="bold" />-->
+
+    <LinearLayout
+        android:id="@+id/min_item"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="2dp">
+
+        <TextView
+            android:id="@+id/tv_min_decade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_min_unit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_colon_three"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="1dp"
+        android:text="分"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/sec_item"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="2dp">
+
+        <TextView
+            android:id="@+id/tv_sec_decade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_sec_unit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_colon_four"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="1dp"
+        android:text="秒"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+</LinearLayout>

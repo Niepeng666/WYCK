@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/theme_bg_color">
+
+        <include layout="@layout/layout_title_transparent" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/theme_bg_color"
+                android:padding="@dimen/dp_20">
+
+                <include layout="@layout/layout_plan_header" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+
+                android:orientation="vertical"
+                android:padding="@dimen/dp_20">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="wrap_content"
+                        android:text="通道名称："
+                        android:textColor="@color/gray_light" />
+
+                    <TextView
+                        android:id="@+id/tv_channel_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_35"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="wrap_content"
+                        android:text="还款金额："
+                        android:textColor="@color/gray_light" />
+
+                    <TextView
+                        android:id="@+id/tv_limit2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_35"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="wrap_content"
+                        android:text="还款周期："
+                        android:textColor="@color/gray_light" />
+
+                    <TextView
+                        android:id="@+id/tv_repay_cyc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_day_times"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_35"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="wrap_content"
+                        android:text="日还款笔数："
+                        android:textColor="@color/gray_light" />
+
+                    <TextView
+                        android:id="@+id/tv_day_times"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_money_cyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_35"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="wrap_content"
+                        android:text="周转金："
+                        android:textColor="@color/gray_light" />
+
+                    <TextView
+                        android:id="@+id/tv_money_cyc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_35"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="wrap_content"
+                        android:text="还款手续费："
+                        android:textColor="@color/gray_light" />
+
+                    <TextView
+                        android:id="@+id/tv_fee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_fee2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_35"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="wrap_content"
+                        android:text="还款笔数费："
+                        android:textColor="@color/gray_light" />
+
+                    <TextView
+                        android:id="@+id/tv_fee2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_workfound"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_35"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_workingFund_name"
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="wrap_content"
+                        android:text="周转金总额："
+                        android:textColor="@color/gray_light" />
+
+                    <TextView
+                        android:id="@+id/tv_zhouzhuanjin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_diqu"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_35"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="wrap_content"
+                        android:text="消费地区："
+                        android:textColor="@color/gray_light" />
+
+                    <TextView
+                        android:id="@+id/diqu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_feeLossAmount"
+                    style="@style/previewPlan"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="手续费损耗金: ￥"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_total_money"
+                    style="@style/previewPlan"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="需支付总额: ￥155.00"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#d2d2d2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_strike_blue_solid_white"
+                        android:gravity="center_vertical">
+
+                        <Button
+                            android:id="@+id/bt_plan_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:singleLine="true"
+                            android:text="预览计划"
+                            android:textColor="?attr/theme_bg_color"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_corners_blue_corner_5"
+                        android:gravity="center_vertical">
+
+                        <Button
+                            android:id="@+id/bt_changePlan"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:singleLine="true"
+                            android:text="修改计划"
+                            android:textColor="@color/btn_text_color"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="@drawable/button_corners_blue_corner_5"
+                android:text="提交计划"
+                android:textColor="@color/btn_text_color" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

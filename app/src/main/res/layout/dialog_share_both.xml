@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/share_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="50dp"
+    android:paddingTop="100dp"
+    android:paddingRight="30dp">
+
+
+    <Button
+        android:id="@+id/btn_url"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_solid_bg_black_corner_20"
+        android:gravity="center"
+        android:text="链接分享"
+        android:textColor="@color/background"
+        android:textSize="@dimen/sp_14" />
+
+    <Button
+        android:id="@+id/btn_pic"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_solid_bg_black_corner_20"
+        android:gravity="center"
+        android:text="二维码分享"
+        android:textColor="@color/background"
+        android:textSize="@dimen/sp_14" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_solid_bg_black_corner_20"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/background"
+        android:textSize="@dimen/sp_14" />
+</LinearLayout>

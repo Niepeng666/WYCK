@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background">
+
+        <include layout="@layout/layout_title_transparent" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_header"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:padding="@dimen/dp_20">
+
+                <include layout="@layout/layout_plan_header" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_solid_white_corner_5"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20">
+
+                <EditText
+                    android:id="@+id/et_inputPayAmount"
+                    style="@style/edit_style"
+                    android:digits="1234567890"
+                    android:hint="请输入还款金额"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_moneyLimit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginBottom="20dp"
+                    android:text="注：还款金额不能低于500,不能超过200000"
+                    android:textColor="#b4acac"
+                    android:textSize="@dimen/sp_10"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_10">
+
+                    <LinearLayout
+                        android:id="@+id/ll_payStartDay"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_55"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_solid_light_gray_corner_5"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="还款开始时间"
+                            android:visibility="gone"
+                            android:textColor="#b4acac"
+                            android:textSize="@dimen/sp_11" />
+
+                        <TextView
+                            android:id="@+id/tv_payStartDay"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="添加日期"
+                            android:lines="2"
+                            android:gravity="center_vertical"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_payEndDay"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_55"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_solid_light_gray_corner_5"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="还款结束时间"
+                            android:textColor="#b4acac"
+                            android:textSize="@dimen/sp_11" />
+
+                        <TextView
+                            android:id="@+id/tv_payEndDay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="添加日期"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_payCycleLimitDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="注：计划还款周期不能超过25日"
+                    android:textColor="#b4acac"
+                    android:textSize="10sp" />
+
+                <RelativeLayout
+                    android:id="@+id/caidan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/shape_solid_light_gray_corner_5"
+                    android:gravity="center">
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:background="@null"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/triangle_bottom" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tishiyu"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="注：要想减少周转金，请拉长还款时间或增加每日还款笔数或减少还款金额"
+                    android:textColor="#b4acac"
+                    android:textSize="10sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_open_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/dp_5"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:visibility="gone">
+
+                        <CheckBox
+                            android:id="@+id/rb_save_psw"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/rb_save_bg"
+                            android:button="@null"
+                            android:checked="true"
+                            android:gravity="center_vertical"
+                            android:padding="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_5"
+                            android:gravity="center_vertical"
+                            android:text="开启自选地区功能" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_40"
+                            android:gravity="center_vertical"
+                            android:text="请选择地区：" />
+
+                        <TextView
+                            android:id="@+id/tv_choiceArea"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_40"
+
+                            android:drawableRight="@drawable/item_right"
+                            android:gravity="center_vertical"
+                            android:hint="请选择地区"
+                            android:maxLines="2"
+                            android:padding="10dip"
+                            android:textColorHint="#bebebe"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/bt_calculateWorkingFund"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_corners_blue_corner_5"
+                    android:text="计算周转金"
+                    android:textColor="@color/btn_text_color" />
+
+                <LinearLayout
+                    android:id="@+id/ll_calculateWorkingFund"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+
+                    <RelativeLayout
+                        android:id="@+id/zhouzhuanlay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_35"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tv_workingFundDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="周转金" />
+
+                        <TextView
+                            android:id="@+id/tv_workingFund"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="￥200000"
+                            android:textColor="#7b7777"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="@color/gray_line" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_35"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tv_payFeeDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="还款手续费" />
+
+                        <TextView
+                            android:id="@+id/tv_payFee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="￥300"
+                            android:textColor="#7b7777"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="@color/gray_line" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_35"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tv_payTimesFeeDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="还款笔数费" />
+
+                        <TextView
+                            android:id="@+id/tv_payTimesFee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="￥5.00"
+                            android:textColor="#7b7777"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_feeLossAmountDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="手续费损耗金" />
+
+                        <TextView
+                            android:id="@+id/tv_feeLossAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="￥73.00"
+                            android:textColor="#7b7777"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/viewa"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="@color/gray_line"
+                        android:visibility="visible" />
+
+                    <RelativeLayout
+                        android:id="@+id/zonge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/tv_fees"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="手续费小计"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_pendingPayAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="￥0.00"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_previewPlan"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_margin="@dimen/dp_20"
+                android:background="@drawable/button_corners_blue_corner_5"
+                android:text="下一步"
+                android:textColor="@color/btn_text_color"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

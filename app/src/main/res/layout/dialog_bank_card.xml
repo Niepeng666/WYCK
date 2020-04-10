@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_corner_5"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:background="@drawable/shape_solid_gray_top_left_right"
+        android:padding="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/iv_bank_icon"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:background="@drawable/shape_solid_white_circle"
+            android:padding="@dimen/dp_2"
+            android:src="@drawable/icon_zhaoshang" />
+
+        <TextView
+            android:id="@+id/tv_bank_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/iv_bank_icon"
+            android:text="银行"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/iv_bank_icon"
+            app:layout_constraintLeft_toRightOf="@id/iv_bank_icon"
+            app:layout_constraintTop_toTopOf="@id/iv_bank_icon" />
+
+        <TextView
+            android:id="@+id/tv_bank_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text=""
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/iv_bank_icon"
+            app:layout_constraintLeft_toRightOf="@id/tv_name"
+            app:layout_constraintTop_toTopOf="@id/iv_bank_icon" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="预留手机号"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintLeft_toLeftOf="@id/tv_bank_account"
+            app:layout_constraintTop_toBottomOf="@id/tv_bank_account" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="持卡人"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintLeft_toLeftOf="@id/tv_bank_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_bank_name" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_solid_white_bottom_left_right"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10">
+
+        <RelativeLayout
+            android:id="@+id/ll_make_yk_design"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40">
+
+            <TextView
+                android:id="@+id/tv_make_yk_design"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/card_yk_plan"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:text="预留本金还款" />
+
+            <TextView
+                android:id="@+id/tv_yk_plan_tip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@id/tv_make_yk_design"
+                android:drawableRight="@drawable/item_right"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_vertical|right"
+                android:text=""
+                android:textColor="@color/green" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/gray_line" />
+
+        <RelativeLayout
+            android:id="@+id/ll_make_qyk_design"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40">
+
+            <TextView
+                android:id="@+id/tv_make_qyk_design"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/card_qyk_pay"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:text="无预留本金还款" />
+
+            <TextView
+                android:id="@+id/tv_qyk_plan_tip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@id/tv_make_qyk_design"
+                android:drawableRight="@drawable/item_right"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_vertical|right"
+                android:text=""
+                android:textColor="@color/green" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/gray_line" />
+
+        <RelativeLayout
+            android:id="@+id/ll_make_channels_design"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40">
+
+            <TextView
+                android:id="@+id/tv_make_design"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/card_channels_pay"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:text="多通道预留还款" />
+
+            <TextView
+                android:id="@+id/tv_channels_plan_tip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@id/tv_make_design"
+                android:drawableRight="@drawable/item_right"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_vertical|right"
+                android:text=""
+                android:textColor="@color/green" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/gray_line" />
+
+        <RelativeLayout
+            android:id="@+id/ll_make_cards_design"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40">
+
+            <TextView
+                android:id="@+id/tv_cards_design"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/card_cards"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:text="一卡多还" />
+
+            <TextView
+                android:id="@+id/tv_cards_plan_tip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@id/tv_cards_design"
+                android:drawableRight="@drawable/item_right"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_vertical|right"
+                android:text=""
+                android:textColor="@color/green" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/gray_line" />
+
+
+        <TextView
+            android:id="@+id/tv_look_plan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:drawableLeft="@drawable/card_look_plan"
+            android:drawableRight="@drawable/item_right"
+            android:drawablePadding="@dimen/dp_10"
+            android:gravity="center_vertical"
+            android:text="查看计划" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/gray_line" />
+
+        <TextView
+            android:id="@+id/tv_look_data"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:drawableLeft="@drawable/card_look_data"
+            android:drawableRight="@drawable/item_right"
+            android:drawablePadding="@dimen/dp_10"
+            android:gravity="center_vertical"
+            android:text="查看资料" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        android:padding="@dimen/dp_5"
+        android:src="@drawable/close" />
+</LinearLayout>

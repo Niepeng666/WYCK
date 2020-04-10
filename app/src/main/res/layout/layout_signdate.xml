@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_shadow"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="2017年7月"
+        android:textColor="@color/text_color" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/gray_line" />
+
+    <com.linglingyi.com.viewone.qiandao.InnerGridView
+        android:id="@+id/gvWeek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="7"></com.linglingyi.com.viewone.qiandao.InnerGridView>
+
+    <com.linglingyi.com.viewone.qiandao.InnerGridView
+        android:id="@+id/gvDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="7"
+        android:padding="@dimen/dp_10"></com.linglingyi.com.viewone.qiandao.InnerGridView>
+</LinearLayout>

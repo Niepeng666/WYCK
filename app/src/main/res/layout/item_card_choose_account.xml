@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_10"
+    android:background="@drawable/shape_solid_white_corner_5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_35"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:src="@drawable/icon_yinlian" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="@dimen/sp_11"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_limit_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:drawablePadding="@dimen/dp_10"
+            android:gravity="right"
+            android:text="限额说明"
+            android:textColor="@color/gray_light"
+            android:textSize="@dimen/sp_10" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:background="@color/gray_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/tv_rate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0.5"
+            android:textColor="?attr/theme_bg_color"
+            android:textSize="@dimen/sp_23" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_single_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="单笔限额"
+                android:textSize="@dimen/sp_10" />
+
+            <TextView
+                android:id="@+id/tv_bank_support"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支持银行："
+                android:textSize="@dimen/sp_10" />
+
+            <TextView
+                android:id="@+id/tv_trade_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="交易时间："
+                android:textSize="@dimen/sp_10" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.linglingyi.com.viewone.FontIconView
+                android:id="@+id/chb_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/icon_check"
+                android:textColor="?attr/theme_bg_color"
+                android:textSize="@dimen/sp_24" />
+
+            <Button
+                android:id="@+id/btn_report"
+                android:layout_width="@dimen/dp_65"
+                android:layout_height="@dimen/dp_25"
+                android:layout_centerInParent="true"
+                android:background="@drawable/shape_solid_background_corner_5"
+                android:text="立即报备"
+                android:textColor="@color/btn_text_color"
+                android:textSize="@dimen/sp_11"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:background="@color/gray_line" />
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/gray_light"
+            android:textSize="@dimen/sp_10" />
+    </RelativeLayout>
+
+
+</LinearLayout>

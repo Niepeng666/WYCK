@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg_f6"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_230">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_180"
+            android:background="@drawable/swipe_top"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <include layout="@layout/layout_title_transparent" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:src="@drawable/yinlian_big_icon" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:background="@drawable/shape_solid_white_corner_5"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/zhifu_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/yinlian_small_icon" />
+
+                <TextView
+                    android:id="@+id/shoukuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:text="请输入收款金额"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/sp_13" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="999,999.00"
+                android:textSize="@dimen/sp_32" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@color/gray_line" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_15"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dp_15"
+            android:layout_height="@dimen/dp_15"
+            android:src="@drawable/main_security_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:text="账户安全由保险公司提供安全保障"
+            android:textColor="#999999"
+            android:textSize="@dimen/sp_10" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/calculator_one_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/one_num"
+                android:textColor="#000000"
+                android:textSize="@dimen/sp_23" />
+
+            <View
+                android:layout_width="@dimen/dp_0_5"
+                android:layout_height="match_parent"
+                android:background="@color/gray_line" />
+
+            <TextView
+                android:id="@+id/calculator_two_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/two_num"
+                android:textColor="#000000"
+                android:textSize="@dimen/sp_23" />
+
+            <View
+                android:layout_width="@dimen/dp_0_5"
+                android:layout_height="match_parent"
+                android:background="@color/gray_line" />
+
+            <TextView
+                android:id="@+id/calculator_three_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/three_num"
+                android:textColor="#000000"
+                android:textSize="@dimen/sp_23" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:background="@color/gray_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/calculator_four_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/four_num"
+                android:textColor="#000000"
+                android:textSize="@dimen/sp_23" />
+
+            <View
+                android:layout_width="@dimen/dp_0_5"
+                android:layout_height="match_parent"
+                android:background="@color/gray_line" />
+
+            <TextView
+                android:id="@+id/calculator_five_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/five_num"
+                android:textColor="#000000"
+                android:textSize="@dimen/sp_23" />
+
+            <View
+                android:layout_width="@dimen/dp_0_5"
+                android:layout_height="match_parent"
+                android:background="@color/gray_line" />
+
+
+            <TextView
+                android:id="@+id/calculator_six_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/six_num"
+                android:textColor="#000000"
+                android:textSize="@dimen/sp_23" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:background="@color/gray_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/calculator_seven_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/seven_num"
+                android:textColor="#000000"
+                android:textSize="@dimen/sp_23" />
+
+            <View
+                android:layout_width="@dimen/dp_0_5"
+                android:layout_height="match_parent"
+                android:background="@color/gray_line" />
+
+
+            <TextView
+                android:id="@+id/calculator_eight_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/eight_num"
+                android:textColor="#000000"
+                android:textSize="@dimen/sp_23" />
+
+
+            <View
+                android:layout_width="@dimen/dp_0_5"
+                android:layout_height="match_parent"
+                android:background="@color/gray_line" />
+
+            <TextView
+                android:id="@+id/calculator_nine_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/nine_num"
+                android:textColor="#000000"
+                android:textSize="@dimen/sp_23" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:background="@color/gray_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/key_selector"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/calculator_point_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/point"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/sp_23"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/dp_0_5"
+                android:layout_height="match_parent"
+                android:background="@color/gray_line" />
+
+
+            <TextView
+                android:id="@+id/calculator_zero_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/zero_num"
+                android:textColor="#000000"
+                android:textSize="@dimen/sp_23" />
+
+            <View
+                android:layout_width="@dimen/dp_0_5"
+                android:layout_height="match_parent"
+                android:background="@color/gray_line" />
+
+            <LinearLayout
+                android:id="@+id/calculator_csign_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/background"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:src="@drawable/swipe_back" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_pay"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_40"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:background="@drawable/button_corners_blue_corner_25"
+        android:text="确认支付"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
+
+</LinearLayout>

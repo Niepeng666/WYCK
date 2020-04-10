@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/rl_header"
+        layout="@layout/layout_title" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tl_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_header"
+        android:background="@color/white"
+        android:visibility="visible"
+        app:tabIndicatorColor="@color/background"
+        app:tabIndicatorHeight="@dimen/dp_3"
+        app:tabMode="fixed"
+
+        app:tabSelectedTextColor="@color/background"
+        app:tabTextColor="@color/gray_888">
+
+        <android.support.design.widget.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="分润" />
+
+        <android.support.design.widget.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="返佣" />
+
+        <android.support.design.widget.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="签到" />
+
+
+    </android.support.design.widget.TabLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_15"
+
+        android:background="@drawable/shape_solid_white_corner_10"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_total_money_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="bottom"
+            android:text="分润总额"
+            android:textSize="@dimen/sp_15" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dp_20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_5"
+                android:text="￥"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:id="@+id/tv_total_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_35" />
+
+        </LinearLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60">
+
+            <TextView
+                android:id="@+id/tv_seven_num_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="七日分润总笔数"
+                app:layout_constraintBottom_toTopOf="@id/tv_seven_num"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="@id/view_center_line"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_seven_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="@id/view_center_line"
+                app:layout_constraintTop_toBottomOf="@id/tv_seven_num_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_2"
+                android:layout_marginBottom="@dimen/dp_2"
+                android:text="笔"
+                android:textSize="@dimen/sp_9"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@id/tv_seven_num"
+                app:layout_constraintLeft_toRightOf="@id/tv_seven_num" />
+
+            <View
+                android:id="@+id/view_center_line"
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="@dimen/dp_25"
+                android:background="@color/gray_line"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_seven_money_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="七日分润总金额"
+                app:layout_constraintLeft_toLeftOf="@id/view_center_line"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_seven_num_title" />
+
+            <TextView
+                android:id="@+id/tv_seven_money_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_2"
+                android:text="￥"
+                android:textSize="@dimen/sp_9"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/view_center_line"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_seven_money_title" />
+
+            <TextView
+                android:id="@+id/tv_seven_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/view_center_line"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_seven_money_title" />
+
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_10">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

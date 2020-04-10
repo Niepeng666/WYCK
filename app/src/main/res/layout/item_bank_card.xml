@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ly_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_18"
+        android:background="@drawable/zhaoshangyinhang_back"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_bank_logo"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginLeft="@dimen/dp_18"
+                    android:src="@drawable/gonshangyinhang" />
+
+                <TextView
+                    android:id="@+id/tv_bank_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_toRightOf="@+id/iv_bank_logo"
+                    android:layout_weight="1"
+                    android:text="工商银行"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="**** **** ****"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_bank_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:text="0521"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_2"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingRight="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"
+                android:src="@drawable/iv_bank_delete"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_update_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="账单日"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_zdr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:text="10"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="还款日"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_hkr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:text="10"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="额度"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_ed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:text="10"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_30"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:text=""
+                    android:textColor="#FFFC00"
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:text="天后到期"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_12" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_make_plan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_strike_white_corner_10"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_2"
+                android:paddingRight="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_2"
+                android:text="定制计划"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_look_plan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/shape_strike_white_corner_10"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_2"
+                android:paddingRight="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_2"
+                android:text="查看计划"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/shape_strike_white_corner_10"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_2"
+                android:paddingRight="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_2"
+                android:text="编辑资料"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

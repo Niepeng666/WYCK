@@ -1,0 +1,53 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\BIANHUA_work\\WYCK\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-en\\values-en.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\BaseRecyclerViewAdapterHelper-2.9.40.aar\\27429d1204bfd55c810013ade2fb5036\\res\\values-en\\values-en.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,111,174",
+                        "endColumns": "55,62,52",
+                        "endOffsets": "106,169,222"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\ImagePicker-1.0.6.aar\\7543cff2aa6a6c1528cbe2efd465bbc8\\res\\values-en\\values-en.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,110,155,204,268,346,397,459,506,553,612,673,740,801,851,900,951,1013,1100,1163,1214",
+                        "endColumns": "54,44,48,63,77,50,61,46,46,58,60,66,60,49,48,50,61,86,62,50,44",
+                        "endOffsets": "105,150,199,263,341,392,454,501,548,607,668,735,796,846,895,946,1008,1095,1158,1209,1254"
+                    },
+                    "to": {
+                        "startLines": "5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "227,282,327,376,440,518,569,631,678,725,784,845,912,973,1023,1072,1123,1185,1272,1335,1386",
+                        "endColumns": "54,44,48,63,77,50,61,46,46,58,60,66,60,49,48,50,61,86,62,50,44",
+                        "endOffsets": "277,322,371,435,513,564,626,673,720,779,840,907,968,1018,1067,1118,1180,1267,1330,1381,1426"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\Android-PickerView-4.1.7.aar\\9b7ae4691f64130fd8bac1cd168dabe4\\res\\values-en\\values-en.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,108,153,200,249,296,345,399",
+                        "endColumns": "52,44,46,48,46,48,53,45",
+                        "endOffsets": "103,148,195,244,291,340,394,440"
+                    },
+                    "to": {
+                        "startLines": "26,27,28,29,30,31,32,33",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "1431,1484,1529,1576,1625,1672,1721,1775",
+                        "endColumns": "52,44,46,48,46,48,53,45",
+                        "endOffsets": "1479,1524,1571,1620,1667,1716,1770,1816"
+                    }
+                }
+            ]
+        }
+    ]
+}

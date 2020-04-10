@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingTop="@dimen/dp_10"
+    android:paddingRight="@dimen/dp_10"
+    android:paddingBottom="@dimen/dp_20">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:gravity="center"
+        android:text="积分获得规则"
+        android:textColor="@color/background"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:text="1.积分从代还与收款产生，比例10：1，即还款1500元返还150积分。"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_30"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_solid_background_corner_5"
+        android:text="关闭"
+        android:textColor="@color/white" />
+</RelativeLayout>

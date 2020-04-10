@@ -1,0 +1,7 @@
+#Fri Apr 10 14:35:12 CST 2020
+base.0=D\:\\BIANHUA_work\\WYCK\\app\\build\\intermediates\\transforms\\dexMerger\\release\\0
+path.1=classes2.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=D\:\\BIANHUA_work\\WYCK\\app\\build\\intermediates\\transforms\\dexMerger\\release\\0

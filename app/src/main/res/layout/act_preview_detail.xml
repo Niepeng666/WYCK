@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/theme_bg_color">
+
+        <include layout="@layout/layout_title_transparent" />
+    </RelativeLayout>
+
+    <include layout="@layout/layout_preview_plan_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/shape_solid_white_corner_5"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/tv_channel_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:text="" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/gray_line" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/tv_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_26" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="还款总额"
+                android:textColor="@color/gray_light"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintTop_toBottomOf="@id/tv_limit" />
+
+            <LinearLayout
+                android:id="@+id/ll_total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="周转金总额："
+                    android:textColor="?attr/theme_bg_color" />
+
+                <TextView
+                    android:id="@+id/tv_total_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textSize="@dimen/sp_13" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_total_service_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_total_price">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手续费小计："
+                    android:textColor="?attr/theme_bg_color" />
+
+                <TextView
+                    android:id="@+id/tv_total_service_fee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/tanhao_icon"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:text="0.00"
+                    android:textSize="@dimen/sp_13" />
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lv_plan_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bt_submit_plan"
+            android:scrollbars="none" />
+
+        <Button
+            android:id="@+id/bt_submit_plan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/dp_20"
+            android:background="@drawable/button_corners_blue_corner_5"
+            android:text="提交计划"
+
+            android:textColor="@color/btn_text_color"
+            android:visibility="visible" />
+    </RelativeLayout>
+</LinearLayout>

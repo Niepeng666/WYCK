@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/shape_solid_white_corner_5"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:gravity="center"
+            android:text="标题:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_120"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:scrollbars="none">
+
+            <TextView
+                android:id="@+id/tv_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+        </ScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:background="#ffd0d0d0" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="我知道了"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="@dimen/dp_0_5"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:background="#ffd0d0d0" />
+
+        <Button
+            android:id="@+id/bt_details"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="查看详情"
+            android:textColor="@color/black" />
+    </LinearLayout>
+</LinearLayout>

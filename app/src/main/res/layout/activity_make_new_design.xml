@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.linglingyi.com.activity.MakeQuickDesignActivity">
+
+    <include
+        android:id="@+id/rl_header"
+        layout="@layout/layout_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+
+                android:text="注：计划执行时需先刷一笔钱用于启动金和支付手续费"
+                android:textColor="@color/bg_blue" />
+
+            <EditText
+                android:id="@+id/et_total_money"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="@drawable/shape_solid_white_corner_5"
+                android:hint="请输入还款总金额"
+                android:inputType="number"
+                android:paddingLeft="@dimen/dp_10"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_40"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_22"
+                android:textSize="@dimen/sp_10"
+                android:text="注：卡内余额不能少于还款金额的5%，且不能低于300元"
+                android:textColor="@color/gray_light" />
+
+            <EditText
+                android:id="@+id/et_working_fund"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="@drawable/shape_solid_white_corner_5"
+                android:hint="请输入启动金额(保证金和手续费)"
+                android:inputType="number"
+                android:paddingLeft="@dimen/dp_10"
+                android:textSize="@dimen/sp_14" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/ll_open_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingLeft="@dimen/dp_25"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_25"
+                android:paddingBottom="@dimen/dp_10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:visibility="visible">
+
+                    <CheckBox
+                        android:id="@+id/rb_save_psw"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/rb_save_bg"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center_vertical"
+                        android:padding="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:gravity="center_vertical"
+                        android:text="开启自选地区功能" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@drawable/shape_strike_gray_corner_10"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="请选择地区：" />
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="-选择地区-"
+                        android:textColor="@color/gray_888" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="@drawable/button_corners_blue_corner_25"
+                android:gravity="center"
+                android:text="预览还款计划"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

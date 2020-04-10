@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="btn_text_color">#fff</color><!--按钮文字颜色-->
+    <color name="text_color">#808080</color><!--普通文字颜色-->
+    <color name="gray_bg_f3">#f3f3f3</color><!--普通页面背景颜色-->
+    <color name="bg_blue">#08BDCD</color><!--顺便把这个颜色也改了-->
+    <color name="background">#08BDCD</color>
+    <color name="background_blue_38a3f7">#38a3f7</color>
+    <color name="background_black_221814">#221814</color>
+    <color name="background_orange_f08519">#f08519</color>
+    <color name="background_yellow_f1b900">#f1b900</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="view_color">#ffd0d0d0</color>
+    <color name="white_60">#3Dffffff</color>
+    <color name="dark_blue">#08BDCD</color>
+    <color name="red">#ff4949</color>
+    <color name="bg_blue_dark">#407CFF</color>
+    <color name="shadow_blue">#9937BABB</color>
+    <color name="shadow_gray">#99c8c8c8</color>
+    <color name="gray_bg_f6">#f6f6f6</color>
+
+    <color name="gray_bg_f7">#f7f7f7</color>
+    <color name="black_24">#3d000000</color>
+    <color name="light_red">#ff7676</color>
+    <color name="red_96">#ff9696</color>
+    <color name="main_yellow">#ffbc4e</color>
+    <color name="light_yellow">#fbd100</color>
+    <color name="light_blue">#0ebdff</color>
+    <color name="button_click">#77E66713</color>
+    <color name="green">#77c78e</color>
+    <color name="gray_f1">#f1f1f1</color>
+    <!--首页-->
+
+
+    <color name="loan_text_color_3">#ff488bf4</color>
+
+
+    <color name="register_text_color_1">#c8c8c8</color>
+
+
+    <color name="black">#000000</color>
+    <color name="black_55">#55000000</color>
+    <color name="white">#FFFFFF</color><!--白色 -->
+    <color name="black_f2">#f2f2f2</color>
+
+    <color name="black_3c3c3c">#3c3c3c</color>
+    <color name="black_10">#101010</color>
+
+    <color name="orange_fb8d1c">#FD8031</color><!-- 黄红色 -->
+    <color name="red_e84230">#E84230</color><!-- 黄红色 -->
+    <!--<color name="title_bg">#7caffd</color>-->
+    <color name="title_bg">#2c51fa</color>
+    <color name="gray_A6BCE8">#A6BCE8</color>
+    <color name="gray_F0F1F6">#F0F1F6</color>
+
+    <color name="gray_light">#ffb0b0b0</color>
+
+    <!--内容文本字体颜色-->
+
+    <color name="gray_line">#ebebeb</color>
+    <color name="gray_888">#888</color>
+    <color name="text_666">#666666</color>
+    <!--修改的字体颜色-->
+
+    <color name="gray">#DCDCDC</color>
+
+    <color name="black_25_percent">#3F000000</color>
+    <color name="black_65_percent">#A5000000</color>
+
+    <color name="qmui_drawable_color_list_separator">#DEE0E2</color>
+    <color name="qmui_drawable_color_list_pressed">#DEE0E2</color>
+    <color name="qmui_config_color_white">#ffffff</color>
+    <color name="register_back_color">#F0F1F6</color>
+    <color name="black_101010">#101010</color>
+    <color name="black_9">#999999</color>
+</resources>

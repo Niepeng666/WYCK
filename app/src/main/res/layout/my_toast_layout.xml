@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@null" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:layout_marginRight="@dimen/dp_24"
+        android:background="@drawable/toast_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp_37"
+        android:paddingTop="@dimen/dp_39" >
+
+        <TextView
+            android:paddingLeft="@dimen/dp_30"
+            android:paddingRight="@dimen/dp_30"
+            android:id="@+id/chapterName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:text="第八百张  鲤鱼跳龙门"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/sp_20" />
+    </RelativeLayout>
+
+</LinearLayout>

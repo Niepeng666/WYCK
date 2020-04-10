@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="200dip"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="10dip"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="15dip"
+    android:background="@drawable/my_dialog_bg">
+
+
+    <TextView
+        android:id="@+id/tv_dialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_top_corner_5"
+        android:gravity="center"
+        android:text="手续费说明"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/matchWrap"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="手续费由两部分组成：\n1.还款手续费=还款总金额X0.85%(费率因会员不同等级而变动)\n2.还款笔数费=1元/笔"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/bt_known"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_corners_blue_corner_5"
+        android:text="我知道了"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+</RelativeLayout>
+
+

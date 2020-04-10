@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/theme_bg_color">
+
+            <include layout="@layout/layout_title_transparent" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/theme_bg_color"
+            android:padding="@dimen/dp_20">
+
+            <include layout="@layout/layout_plan_header" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="选择通道" />
+
+            <RadioGroup
+                android:id="@+id/rg_channel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:id="@+id/rbt_channel_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:checked="true"
+                    android:text="小额"
+                    android:textColor="@drawable/widget_rb_selector_xdtx"
+                    android:textSize="@dimen/sp_14" />
+
+                <View
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="@dimen/dp_15"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:background="@color/gray" />
+
+                <RadioButton
+                    android:id="@+id/rbt_channel_big"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:text="大额"
+                    android:textColor="@drawable/widget_rb_selector_xdtx"
+                    android:textSize="@dimen/sp_14" />
+
+                <View
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="@dimen/dp_15"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:background="@color/gray" />
+
+                <RadioButton
+                    android:id="@+id/rbt_channel_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:text="组合"
+                    android:textColor="@drawable/widget_rb_selector_xdtx"
+                    android:textSize="@dimen/sp_14" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_channel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_make_design"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/view_close"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/black_55" />
+
+
+        <include layout="@layout/dialog_make_design" />
+    </LinearLayout>
+
+</RelativeLayout>

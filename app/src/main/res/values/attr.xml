@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="gridPasswordView">
+
+        <attr name="textColor" format="color|reference" />
+        <attr name="textSize" format="dimension" />
+
+        <attr name="lineColor" format="color" />
+        <attr name="gridColor" format="color" />
+        <attr name="lineWidth" format="dimension" />
+
+        <attr name="passwordLength" format="integer" />
+        <attr name="passwordTransformation" format="string" />
+
+        <attr name="passwordType" format="enum">
+            <enum name="numberPassword" value="0" />
+            <enum name="textPassword" value="1" />
+            <enum name="textVisiblePassword" value="2" />
+            <enum name="textWebPassword" value="3" />
+        </attr>
+
+    </declare-styleable>
+    <declare-styleable name="PowerImageView">
+        <attr name="auto_play" format="boolean"></attr>
+    </declare-styleable>
+
+    <!--自动换行的LinearLayout !-->
+    <declare-styleable name="WarpLinearLayout">
+        <attr name="grivate" format="enum"><!--对齐方式 !-->
+            <enum name="right" value="0"></enum>
+            <enum name="left" value="1"></enum>
+            <enum name="center" value="2"></enum>
+        </attr>
+        <attr name="horizontal_Space" format="dimension"></attr>
+        <attr name="vertical_Space" format="dimension"></attr>
+        <attr name="isFull" format="boolean"></attr>
+    </declare-styleable>
+    <declare-styleable name="AutoPlayRecyclerView">
+        <attr name="timeInterval" format="integer" />
+        <attr name="direction" format="enum">
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+    </declare-styleable>
+    <attr name="theme_bg_color" format="reference" />
+    <attr name="selector_img" format="reference"/>
+</resources>
